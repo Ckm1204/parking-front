@@ -1,0 +1,19 @@
+<form [formGroup]="parkingSpotForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Name:</label>
+    <input formControlName="nombre">
+  </div>
+  <div>
+    <label>NIT:</label>
+    <input formControlName="nit">
+  </div>
+  <div>
+    <label>Address:</label>
+    <input formControlName="direccion">
+  </div>
+  <div>
+    <label>Phone:</label>
+    <input formControlName="telefono">
+  </div>
+  <p-button label="Save" icon="pi pi-check" type="submit"></p-button>
+</form>

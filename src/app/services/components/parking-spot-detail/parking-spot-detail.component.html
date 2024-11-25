@@ -1,0 +1,21 @@
+<div class="parking-spot-detail" *ngIf="parkingSpot">
+  <h2>Parking Spot Details</h2>
+  <div>
+    <label>Name:</label>
+    <span>{{ parkingSpot?.nombre }}</span>
+  </div>
+  <div>
+    <label>NIT:</label>
+    <span>{{ parkingSpot?.nit }}</span>
+  </div>
+  <div>
+    <label>Address:</label>
+    <span>{{ parkingSpot?.direccion }}</span>
+  </div>
+  <div>
+    <label>Phone:</label>
+    <span>{{ parkingSpot?.telefono }}</span>
+  </div>
+  <p-button label="Edit" icon="pi pi-pencil" (click)="editParkingSpot()"></p-button>
+  <p-button label="Delete" icon="pi pi-trash" (click)="deleteParkingSpot()"></p-button>
+</div>

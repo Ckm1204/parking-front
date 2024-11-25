@@ -1,0 +1,22 @@
+<div class="parking-spot-list">
+  <h2>Parking Spots</h2>
+  <p-table [value]="parkingSpots" selectionMode="single" [(selection)]="selectedParkingSpot" (onRowSelect)="onRowSelect($event)">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Name</th>
+        <th>NIT</th>
+        <th>Address</th>
+        <th>Phone</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-parkingSpot>
+      <tr [pSelectableRow]="parkingSpot">
+        <td>{{ parkingSpot.nombre }}</td>
+        <td>{{ parkingSpot.nit }}</td>
+        <td>{{ parkingSpot.direccion }}</td>
+        <td>{{ parkingSpot.telefono }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-button label="Add Parking Spot" icon="pi pi-plus" (click)="addParkingSpot()"></p-button>
+</div>

@@ -1,0 +1,22 @@
+<div class="parking-spot-create">
+  <h2>Create Parking Spot</h2>
+  <form [formGroup]="parkingSpotForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="nombre">Name:</label>
+      <input id="nombre" formControlName="nombre" pInputText />
+    </div>
+    <div>
+      <label for="nit">NIT:</label>
+      <input id="nit" formControlName="nit" pInputText />
+    </div>
+    <div>
+      <label for="direccion">Address:</label>
+      <input id="direccion" formControlName="direccion" pInputText />
+    </div>
+    <div>
+      <label for="telefono">Phone:</label>
+      <input id="telefono" formControlName="telefono" pInputText />
+    </div>
+    <p-button label="Save" icon="pi pi-check" type="submit"></p-button>
+  </form>
+</div>
